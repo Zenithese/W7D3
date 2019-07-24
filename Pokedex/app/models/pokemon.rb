@@ -7,7 +7,7 @@ class Pokemon < ApplicationRecord
     'psychic',
     'water',
     'bug',
-    'dragon',
+    'dragon', 
     'grass',
     'fighting',
     'ice',
