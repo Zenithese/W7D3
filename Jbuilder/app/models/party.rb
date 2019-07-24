@@ -6,4 +6,8 @@ class Party < ApplicationRecord
   has_many :guests,
     through: :invitations,
     source: :guest
+
+  has_many :gifts,
+    through: :guests,
+    source: :gifts
 end
