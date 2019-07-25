@@ -4,12 +4,9 @@ import { requestAllPokemon } from '../../actions/pokemon_actions';
 import { selectAllPokemon } from '../../reducers/selectors';
 import PokemonIndex from './pokemon_index';
 
-const msp = (state = {}, props) => {
+const msp = (state = {}) => {
   const { pokemon } = state.entities;
-
-  return {
-    pokemon: Object.values(pokemon),
-  }
+  return { pokemon: Object.values(pokemon) }
 }
 
 const mdp = (dispatch) => {
