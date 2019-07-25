@@ -1,17 +1,15 @@
 import { RECEIVE_ALL_POKEMON } from '../../actions/pokemon_actions';
+import { merge } from 'lodash';
 
-export default pokemonReducer = (state = {}, action) => {
+export default (state = {}, action) => {
   const oldState = Object.freeze(state);
   const { pokemon } = action;
   let newState;
 
   switch(action.type){
     case RECEIVE_ALL_POKEMON: 
-      newState = {};
-      action.pokemon.forEach(pokemon => {
-        newState[pokemon.id] = pokemon;
-      });
-      return newState;    
+      // return Object.assign({},action.pokemon);
+      return merge({}, oldState, action.pokemon);    
     default:
       return state;
   }
