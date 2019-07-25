@@ -12,7 +12,7 @@ export const Root = ({store}) => (
         <Switch>
           {/* <Route path={`pokemon/${pokemon.id}`} component={PokemonIndexItem}/> */}
           <Route path="/" component={PokemonIndexContainer}/>
-          <Route path="" component={PokemonDetail}/>
+          {/* <Route path="" component={PokemonDetail}/> */}
         </Switch>
       </div>
     </Provider>
