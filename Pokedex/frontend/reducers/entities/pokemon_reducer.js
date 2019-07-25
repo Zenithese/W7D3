@@ -9,7 +9,7 @@ export default (state = {}, action) => {
   switch(action.type){
     case RECEIVE_ALL_POKEMON: 
       // return Object.assign({},action.pokemon);
-      return merge({}, oldState, action.pokemon);    
+      return merge({}, oldState, pokemon);    
     default:
       return state;
   }
